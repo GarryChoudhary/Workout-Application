@@ -27,7 +27,14 @@ GET      /workout/:id ---> Get a single workout docs
 DELETE   /workout/:id ---> Delete a single workout docs
 PATCH    /workout/:id ---> Update a sinlde workout docs
 
+## How to run:-
+nodemon server.js
+
 
 ## FRONTEND
 
 npm create vite@latest
+
+
+## How to run:-
+npm run dev
