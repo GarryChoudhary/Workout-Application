@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import { browserRouter, Routes, Route, BrowserRouter } from 'react-router-dom'
+import {Routes, Route, BrowserRouter } from 'react-router-dom'
+import Home from './pages/Home'
+import Navbar from './components/Navbar'
 
 function App() {
 
@@ -8,9 +10,10 @@ function App() {
     <>
       <div className='App'>
         <BrowserRouter>
+        <Navbar/>
           <div className='pages'>
             <Routes>
-              <Route path='/' element={} />
+              <Route path='/' element={<Home/>} />
             </Routes>
           </div>
         </BrowserRouter>

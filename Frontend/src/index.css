@@ -16,3 +16,116 @@
   --mono: ui-monospace, Consolas, monospace;
 
 }
+
+body {
+  font-family: var(--sans);
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+header {
+  background-color: var(--bg);
+
+}
+
+header .container {
+  /* height: 80px; */
+  padding: 30px 20px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+}
+
+.container a {
+  color: black;
+  text-decoration: none;
+
+}
+
+.container h1 {
+  margin: 0;
+}
+
+.pages {
+  max-width: 1400px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+
+.workoutDetails{
+  position: relative;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  background-color: var(--bg);
+
+}
+.workoutDetails h4 {
+  color: rgb(9, 174, 9);
+  font-size: 1.5rem;
+  padding: 0 0 10px 0;
+  margin: 0;
+  
+}
+
+.workoutDetails p {
+  margin: 0;
+  font-size: 1rem;
+}
+.workoutDetails p strong{
+  margin-right: 5px;
+}
+
+input,label{
+  display: block;
+  margin-bottom: 1rem;
+  width: 17rem;
+  height: 1.7rem;
+  border: 0;
+  border-radius: 5px;
+}
+
+button{
+  height: 2rem;
+  width: 6rem;
+  background-color: rgb(79, 166, 79);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error{
+  color: red;
+  margin: 20px 0;
+  border: 1px solid red;
+  padding: 10px;
+  background-color: #ffefef;
+  border-radius: 5px;
+}
+
+span{
+  position:absolute;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+}
+
+input.error2{
+  border: 0.5px solid red;
+  background-color: #ffefef;
+}

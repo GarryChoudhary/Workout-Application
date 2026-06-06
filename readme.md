@@ -8,14 +8,14 @@ N - nodejs(backend)
          React                            Nodejs+express             mongodb
 
 
-Bankend:--
+# Bankend:--
 
-# npm init -y
-# npm i node
-# npm i express
-# npm i dotenv
-# npm i mongoose
-# npm i -g nodemon
+ npm init -y
+ npm i node
+ npm i express
+ npm i dotenv
+ npm i mongoose
+ npm i -g nodemon
 
 
 

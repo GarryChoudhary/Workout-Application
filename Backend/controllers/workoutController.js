@@ -3,12 +3,12 @@ const mongoose = require('mongoose')
 
 // get all workouts
 exports.getAllWorkouts = async (req, res) => {
-    const workouts = await Workout.find({}).sort({ createAt: -1 })
+    const workouts = await Workout.find({}).sort({ createdAt: -1 })
 
     if (!workouts)
         return res.status(400).json({ error: "No entity found" })
 
-    res.status(200).json({ workouts })
+    res.status(200).json( workouts )
 }
 
 
@@ -23,7 +23,7 @@ exports.getWorkoutById = async (req, res) => {
     if (!workout)
         return res.status(404).json({ error: " No such workout" })
 
-    res.status(200).json({ workout })
+    res.status(200).json(workout )
 
 }
 
@@ -32,6 +32,24 @@ exports.getWorkoutById = async (req, res) => {
 exports.createWorkout = async (req, res) => {
 
     const { title, reps, load } = req.body;
+
+    let emptyField =[]
+
+    if(!title){
+        emptyField.push('title')
+    }
+    if(!load){
+        emptyField.push('load')
+    }
+    if(!reps){
+        emptyField.push('reps')
+    }
+
+    if(emptyField.length > 0){
+        return res.status(400).json({error: 'Please fill out all the fields!', emptyField})
+    }
+
+
     try {
         const workout = await Workout.create({ title, reps, load });
         res.status(200).json(workout)
@@ -81,5 +99,5 @@ exports.updateWorkout = async(req,res)=>{
     if(!workout)
         return res.status(404).json({error: "No such workout"})
 
-    res.status(200).json({workout})
+    res.status(200).json(workout)
 }
